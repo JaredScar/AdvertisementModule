@@ -5,4 +5,4 @@
  */
 
 require_once __DIR__ . '/module.php';
-$module = new AdvertisementModule($pages);
+$module = new AdvertisementModule($pages, $queries);

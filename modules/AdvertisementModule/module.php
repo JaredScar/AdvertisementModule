@@ -5,7 +5,7 @@ class AdvertisementModule extends Module {
     public static $DELETE_PERMISSION = "advertisement.delete";
     public static $VIEW_PERMISSION = "advertisement.view_stats";
 
-    public function __construct($pages) {
+    public function __construct($pages, $queries) {
 
         $name = 'AdvertisementModule';
         $author = 'JaredScar';
@@ -18,6 +18,7 @@ class AdvertisementModule extends Module {
         $pages->add($name, '/panel/ad_add', 'pages/panel/advertisement_add.php', 'Add Advertisement', false);
         $pages->add($name, '/panel/ad_delete', 'pages/panel/advertisement_delete.php', 'Delete Advertisement', false);
         $pages->add($name, '/ad_stats', 'pages/advertisement_stats.php', 'Advertisement Stats', false);
+        $this->queries = $queries;
     }
 
     public function onInstall() {
