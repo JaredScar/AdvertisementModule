@@ -32,8 +32,8 @@ class AdvertisementModule extends Module {
                 '
                 `ad_id` INT(11) NOT NULL AUTO_INCREMENT,
                 `creator_id` INT(11) NOT NULL,
-                `ad_header` VARCHAR(600),
-                `ad_content` VARCHAR(4024),
+                `ad_header` VARCHAR(100),
+                `ad_content` VARCHAR(2024),
                 `creation_timestamp` DATETIME NOT NULL,
                 PRIMARY KEY (`ad_id`)
                 ', 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4');
