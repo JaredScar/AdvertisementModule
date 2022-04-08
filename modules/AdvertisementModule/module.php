@@ -5,7 +5,7 @@ class AdvertisementModule extends Module {
     public static $DELETE_PERMISSION = "advertisement.delete";
     public static $VIEW_PERMISSION = "advertisement.view_stats";
 
-    public function __construct() {
+    public function __construct($pages) {
 
         $name = 'AdvertisementModule';
         $author = 'JaredScar';
@@ -14,10 +14,10 @@ class AdvertisementModule extends Module {
 
         parent::__construct($this, $name, $author, $module_version, $nameless_version);
 
-        $this->pages->add($name, '/panel/ad_settings', 'pages/panel/advertisement_settings.php', 'Advertisement Settings', false);
-        $this->pages->add($name, '/panel/ad_add', 'pages/panel/advertisement_add.php', 'Add Advertisement', false);
-        $this->pages->add($name, '/panel/ad_delete', 'pages/panel/advertisement_delete.php', 'Delete Advertisement', false);
-        $this->pages->add($name, '/ad_stats', 'pages/advertisement_stats.php', 'Advertisement Stats', false);
+        $pages->add($name, '/panel/ad_settings', 'pages/panel/advertisement_settings.php', 'Advertisement Settings', false);
+        $pages->add($name, '/panel/ad_add', 'pages/panel/advertisement_add.php', 'Add Advertisement', false);
+        $pages->add($name, '/panel/ad_delete', 'pages/panel/advertisement_delete.php', 'Delete Advertisement', false);
+        $pages->add($name, '/ad_stats', 'pages/advertisement_stats.php', 'Advertisement Stats', false);
     }
 
     public function onInstall() {
