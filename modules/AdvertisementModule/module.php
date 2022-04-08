@@ -20,16 +20,12 @@ class AdvertisementModule extends Module {
         $this->pages->add($name, '/ad_stats', 'pages/advertisement_stats.php', 'Advertisement Stats', false);
     }
 
-    public function onInstall() {}
-
-    public function onUninstall() {}
-
-    public function onEnable() {
+    public function onInstall() {
         try {
             if (!$this->queries->tableExists('advertisements')) {
                 // The advertisements table does not exist, we want to create it:
                 $this->queries->createTable('advertisements',
-                '
+                    '
                 `ad_id` INT(11) NOT NULL AUTO_INCREMENT,
                 `creator_id` INT(11) NOT NULL,
                 `ad_header` VARCHAR(100),
@@ -58,6 +54,10 @@ class AdvertisementModule extends Module {
             die("Error Encountered: " . $e->getMessage());
         }
     }
+
+    public function onUninstall() {}
+
+    public function onEnable() {}
 
     public function onDisable() {}
 
