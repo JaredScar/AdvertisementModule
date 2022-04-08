@@ -5,6 +5,7 @@
 !/modules
 /modules/*
 !/modules/AdvertisementModule
+!/README.md
 
 !/custom
 /custom/*
