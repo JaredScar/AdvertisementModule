@@ -1,16 +1,18 @@
 /*
 
 !.gitignore
+!/README.md
 
 !/modules
 /modules/*
 !/modules/AdvertisementModule
-!/README.md
+!/modules/AdvertisementModule/**
 
 !/custom
 /custom/*
 !/custom/panel_templates
-
+/custom/panel_templates/*
 !/custom/panel_templates/Default
 /custom/panel_templates/Default/*
-!/custom/panel_templates/Default/releases
+!/custom/panel_templates/Default/advertisement
+!/custom/panel_templates/Default/advertisement/**
